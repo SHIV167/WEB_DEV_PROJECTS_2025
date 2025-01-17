@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>BULB ANIMATION IN JS</title>
+    <meta name="description" content="BULB ANIMATION IN JS">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+    <style>
+        .container {
+            padding: 0;
+            margin: 0 auto;
+            display: block;
+        }
+
+        img {
+            width: 20%;
+            background-repeat: no-repeat;
+            object-fit: contain;
+        }
+
+        button {
+            background: black;
+            padding: 16px 71px;
+            color: white;
+            font-size: 2em;
+            align-items: center;
+            align-content: center;
+        }
+    </style>
+    <div class="container">
+        <img src="images/off.png" alt="off" id="onoff" />
+        <button onclick="buttonfun()" id="but">ON</button>
+    </div>
+    <script async defer>
+
+        //alert("helllo !!!");
+        var val = document.getElementById("onoff");
+        var but = document.getElementById("but");
+        function buttonfun() {
+            if (but.textContent.includes('ON')) {
+                val.src = "images/on.png";
+                but.textContent = "OFF";
+                //alert("helllo !!!");
+            }
+            else {
+                val.src = "images/off.png";
+                but.textContent = "ON"
+            }
+        }
+    </script>
+</body>
+
+</html>
